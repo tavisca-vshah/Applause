@@ -9,6 +9,7 @@ import { DashboardTimelineComponent } from "../../shared/components/dashboard-ti
 import { DashboardPrStatsComponent } from "../../shared/components/dashboard-pr-stats/dashboard-pr-stats.component";
 import { DashboardTimesheetStatsComponent } from "../../shared/components/dashboard-timesheet-stats/dashboard-timesheet-stats.component";
 import { HonourCardComponent } from "../../shared/components/honour-card/honour-card.component";
+import { HonourBannerComponent } from "../../shared/components/honour-banner/honour-banner.component";
 
 const routes: Routes = [
   {
@@ -29,7 +30,8 @@ const routes: Routes = [
     DashboardTimelineComponent,
     DashboardPrStatsComponent,
     DashboardTimesheetStatsComponent,
-    HonourCardComponent
+    HonourCardComponent,
+    HonourBannerComponent
   ]
 })
 export class DashboardModule {}
