@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Organization TImeSheet Stats</h4>
+    <br />
+    <ngx-charts-advanced-pie-chart
+      [scheme]="colorScheme"
+      [results]="single"
+      (legendLabelClick)="onLegendLabelClick($event)"
+      [gradient]="gradient"
+      [tooltipDisabled]="tooltipDisabled"
+      (select)="select($event)"
+    >
+    </ngx-charts-advanced-pie-chart>
+    <br />
+    <br />
+  </div>
+</div>

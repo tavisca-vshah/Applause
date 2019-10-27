@@ -1,0 +1,19 @@
+<div class="row justify-content-center">
+  <div class="col-md-2" *ngFor="let employee of employees">
+    <div class="card">
+      <div class="card-body text-center">
+        <img
+          src="{{ employee.photoUri }}"
+          class="rounded-circle border p-1"
+          width="100"
+        />
+        <h4 class="card-title mt-2 mb-0">{{ employee.name }}</h4>
+        <span class="badge badge-pill badge-primary">{{ employee.tribe }}</span>
+        <div class="mt-1 pt-3">
+          <span class="badge badge-pill badge-success"><b>3000</b></span>
+        </div>
+        <img src="assets/images/{{ employee.badge }}.png" />
+      </div>
+    </div>
+  </div>
+</div>
