@@ -1,3 +1,4 @@
+import { SummaryPipe } from "./../../shared/pipes/summary.pipe";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DashboardComponent } from "./dashboard.component";
@@ -29,7 +30,8 @@ const routes: Routes = [
     DashboardTimelineComponent,
     DashboardPrStatsComponent,
     DashboardTimesheetStatsComponent,
-    HonourCardComponent
+    HonourCardComponent,
+    SummaryPipe
   ]
 })
 export class DashboardModule {}
