@@ -1,15 +1,14 @@
 #reward-card {
   background: Transparent url("assets/images/stars.png") center center;
-  background-origin: content-box;
-  background-clip: content-box;
   background-position: right right;
+  background-repeat: repeat-x;
 }
 
 .ribbon {
   position: absolute;
-  right: -5px;
+  right: 10px;
   top: -5px;
-  z-index: 1;
+  z-index: 2;
   overflow: hidden;
   width: 100px;
   height: 75px;

@@ -4,7 +4,10 @@ import { CommonModule } from "@angular/common";
 import { DashboardComponent } from "./dashboard.component";
 import { Routes, RouterModule } from "@angular/router";
 import { RewardCardComponent } from "../../shared/components/reward-card/reward-card.component";
-import { NgbProgressbarModule } from "@ng-bootstrap/ng-bootstrap";
+import {
+  NgbProgressbarModule,
+  NgbCarouselModule
+} from "@ng-bootstrap/ng-bootstrap";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { DashboardTimelineComponent } from "../../shared/components/dashboard-timeline/dashboard-timeline.component";
 import { DashboardPrStatsComponent } from "../../shared/components/dashboard-pr-stats/dashboard-pr-stats.component";
@@ -23,7 +26,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     NgbProgressbarModule,
-    NgxChartsModule
+    NgxChartsModule,
+    NgbCarouselModule
   ],
   declarations: [
     DashboardComponent,
