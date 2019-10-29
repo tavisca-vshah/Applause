@@ -10,7 +10,7 @@ import { NgbCarouselConfig } from "@ng-bootstrap/ng-bootstrap";
 export class DashboardComponent implements OnInit {
   constructor(config: NgbCarouselConfig) {
     config.interval = 2000;
-    config.wrap = false;
+    config.wrap = true;
     config.keyboard = false;
 
     config.showNavigationArrows = true;

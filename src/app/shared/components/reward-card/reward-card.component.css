@@ -3,7 +3,9 @@
   background-position: right right;
   background-repeat: repeat-x;
 }
-
+.honour-banner {
+  height: 270px;
+}
 .ribbon {
   position: absolute;
   right: 10px;
