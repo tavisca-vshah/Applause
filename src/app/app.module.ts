@@ -20,6 +20,7 @@ import { FooterComponent } from "./shared/layout/footer/footer.component";
 import { HeaderComponent } from "./shared/layout/header/header.component";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./core/services/in-memory-data.service";
+import { UserCardComponent } from './shared/components/user-card/user-card.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -35,7 +36,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NavigationComponent,
     BreadcrumbComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,

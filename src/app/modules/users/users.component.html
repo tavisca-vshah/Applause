@@ -1,6 +1,57 @@
-<ul>
-  <li *ngFor="let employee of employees">
-    {{ employee.id }} {{ employee.name }} {{ employee.tribe }}
-    {{ employee.points }} {{ employee.photoUrl }} {{ employee.email }}
-  </li>
-</ul>
+<div class="row mb-4">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search User" />
+      <div class="input-group-append">
+        <button class="btn btn-outline-primary" type="button">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+<div class="row">
+  <div
+    class="col-md-2"
+    *ngFor="
+      let employee of employees
+        | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize
+    "
+  >
+    <div class="card">
+      <div class="card-body text-center">
+        <img
+          src="{{ employee.photoUri }}"
+          class="rounded-circle border p-1"
+          width="100"
+        />
+        <h4 class="card-title mt-2 mb-0">{{ employee.name }}</h4>
+        <span class="badge badge-primary">{{ employee.tribe }}</span>
+        <div class="row mt-1">
+          <div class="col-md-4 px-1">
+            <img
+              class="mt-1 pl-0 mb-1"
+              src="assets/images/{{ employee.badge }}.png"
+            />
+            <span class="badge badge-success"><b>Gold</b></span>
+          </div>
+          <div class="col-md-4 px-1">
+            <i class="fa fa-trophy fa-2x mt-1 rewards-icon"></i>
+            <span class="badge badge-success"><b>222</b></span>
+          </div>
+          <div class="col-md-4 px-1">
+            <i class="fa fa-star fa-2x mt-1 rewards-icon"></i>
+            <span class="badge badge-success"><b>2568</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ngb-pagination
+  class="d-flex justify-content-end"
+  [collectionSize]="employees.length"
+  [(page)]="page"
+></ngb-pagination>

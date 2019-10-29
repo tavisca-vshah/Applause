@@ -1,3 +1,47 @@
-<p>
-  rewards works!
-</p>
+<ul class="nav" style="background-color: royalblue;">
+  <li class="nav-item">
+    <a class="nav-link active text-white" href="#"
+      ><b><i class="fa fa-certificate"></i> Kudos</b></a
+    >
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="#"
+      ><b><i class="fa fa-trophy"></i> Shoutouts</b></a
+    >
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="#"
+      ><b><i class="fa fa-shield"></i> Annual</b></a
+    >
+  </li>
+</ul>
+
+<div class="row">
+  <div
+    class="col-md-2"
+    *ngFor="
+      let employee of employees
+        | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize
+    "
+  >
+    <div class="card">
+      <div class="card-body text-center">
+        <img
+          src="{{ employee.photoUri }}"
+          class="rounded-circle border p-1"
+          width="100"
+        />
+        <h4 class="card-title mt-2 mb-0">{{ employee.name }}</h4>
+        <span class="badge badge-primary">{{ employee.tribe }}</span>
+        <div class="mt-3">
+          <i class="fa fa-bullseye fa-2x kudos-icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ngb-pagination
+  class="d-flex justify-content-end"
+  [collectionSize]="employees.length"
+  [(page)]="page"
+></ngb-pagination>
