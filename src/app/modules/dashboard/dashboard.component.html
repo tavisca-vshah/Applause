@@ -1,27 +1,20 @@
 <div class="row">
   <div class="col-12">
-    <!-- <div class="card honour-banner">
-      <div class="card-body">
-        <honour-banner></honour-banner>
-        <app-reward-card></app-reward-card>
-       
-      </div>
-    </div> -->
     <ngb-carousel
       [showNavigationArrows]="showNavigationArrows"
       [showNavigationIndicators]="showNavigationIndicators"
-      interval="2000"
+      interval="1500"
+      pauseOnHover="false"
       wrap="true"
     >
       <ng-template ngbSlide>
         <honour-banner></honour-banner>
       </ng-template>
-      <ng-template ngbSlide>
-        <app-reward-card></app-reward-card>
-      </ng-template>
-      <ng-template ngbSlide>
-        <honour-banner></honour-banner>
-      </ng-template>
+      <div *ngFor="let award of employeesAwards">
+        <ng-template ngbSlide>
+          <app-reward-card [empoyeeAward]="award"></app-reward-card>
+        </ng-template>
+      </div>
     </ngb-carousel>
   </div>
 </div>

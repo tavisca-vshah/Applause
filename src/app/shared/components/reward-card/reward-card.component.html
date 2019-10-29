@@ -2,19 +2,23 @@
   <div class="card honour-banner">
     <div class="card-body">
       <div class="media border-0 ml-2">
-        <div class="ribbon blue"><span>Kudos</span></div>
+        <div class="ribbon blue">
+          <span>{{ empoyeeAward.award }}</span>
+        </div>
         <img
           class="mr-3 rounded-circle mt-2"
-          src="assets/images/users/2.jpg"
+          [src]="empoyeeAward.photoUrl"
           width="190"
           alt="Generic placeholder image"
         />
         <div class="media-body" id="reward-card">
-          <h4 class="mt-3 mb-0 display-6">John Doe</h4>
+          <h4 class="mt-3 mb-0 display-6">{{ empoyeeAward.name }}</h4>
           <br />
-          <span class="badge badge-pill badge-primary">Enablement</span>
+          <span class="badge badge-pill badge-primary">{{
+            empoyeeAward.tribe
+          }}</span>
           <p class="mt-3 ml-1 lead">
-            {{ description | summary }}
+            {{ empoyeeAward.description | summary }}
           </p>
         </div>
       </div>

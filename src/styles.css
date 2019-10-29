@@ -7,8 +7,7 @@
   right: auto;
 }
 
-.carousel-item {
-  /* transition: opacity 1s opacity 2s ease-in-out !important; */
+/* .carousel-item {
   position: absolute !important;
   display: block !important;
   opacity: 0;
@@ -27,4 +26,4 @@
   to {
     transform: none;
   }
-}
+} */

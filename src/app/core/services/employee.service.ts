@@ -1,4 +1,4 @@
-import { Employee } from "./../mocks/employee";
+import { Employee } from "../../shared/models/employee";
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
