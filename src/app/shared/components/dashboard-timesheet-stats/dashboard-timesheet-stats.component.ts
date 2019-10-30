@@ -12,6 +12,7 @@ export class DashboardTimesheetStatsComponent implements OnInit {
   dateData: any[];
   gradient = false;
   tooltipDisabled = false;
+  chartDimension = [411, 322];
 
   colorScheme = {
     domain: [

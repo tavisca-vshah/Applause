@@ -2,15 +2,22 @@
   <div class="card-body">
     <h4 class="card-title">Organization TImeSheet Stats</h4>
     <br />
-    <ngx-charts-advanced-pie-chart
+    <ngx-charts-pie-chart
+      class="chart-container"
+      [view]="chartDimension"
       [scheme]="colorScheme"
       [results]="single"
+      [legend]="showLegend"
+      [explodeSlices]="explodeSlices"
+      [labels]="showLabels"
+      [doughnut]="doughnut"
+      [arcWidth]="arcWidth"
       (legendLabelClick)="onLegendLabelClick($event)"
       [gradient]="gradient"
       [tooltipDisabled]="tooltipDisabled"
       (select)="select($event)"
     >
-    </ngx-charts-advanced-pie-chart>
+    </ngx-charts-pie-chart>
     <br />
     <br />
   </div>
