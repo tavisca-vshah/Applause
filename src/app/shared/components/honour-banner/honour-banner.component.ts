@@ -26,7 +26,7 @@ export class HonourBannerComponent implements OnInit {
         email: "vshah@gmail.com",
         photoUri: "assets/images/users/2.jpg",
         tribe: "Enablement",
-        points: 3000,
+        points: 4500,
         badge: "goldmedal"
       },
       {

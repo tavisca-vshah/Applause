@@ -5,7 +5,7 @@ export const single = [
   },
   {
     name: "Checkout",
-    value: 49
+    value: 100
   },
   {
     name: "Chai",
