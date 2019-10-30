@@ -1,0 +1,25 @@
+<div class="row" *ngIf="rules">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Rules Titile</h3>
+		<h6 class="card-subtitle">Rules Subtitle</h6>
+		<ngb-accordion 
+		*ngFor="let rule of rules"
+		#acc="ngbAccordion" 
+		activeIds="ngb-panel-0" >
+			<ngb-panel title="{{ rule.title }}">
+				<ng-template ngbPanelContent>
+					<p>Rules Heading</p>
+					<ul *ngFor="let rule of rule.rulesList">
+						<li>
+							<span>{{rule.description}} - {{ rule.points }}</span>
+						</li>
+					</ul>
+				</ng-template>
+			</ngb-panel>
+        </ngb-accordion>
+      </div>
+    </div>
+  </div>
+</div>
